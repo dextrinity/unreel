@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.scss';
+import HeaderContent from "./components/Header/HeaderContent"
+import MovieList from './components/ListofMovies/Movies/MovieList';
+import TVSeasonList from './components/ListofMovies/TVSeasons/TVSeasonList';
+import TVSeasons from './components/ListofMovies/TVSeasons/TVSeasons';
+import Home from './pages/HomePage/Home';
+import Movies from './pages/Movies';
+import TVShows from './pages/TVShows';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <HeaderContent />
+          <div className="container">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/movies' element={<Movies />}/>
+            <Route path='/tvshows' element={<TVShows />}/>
+            <Route path='/movies/:movieId' element={<MovieList />}/>
+            <Route path='/tvshows/:tvId' element={<TVSeasonList />}/>
+          </Routes>
+        
+        </div>
+
+    </BrowserRouter>
     </div>
   );
 }

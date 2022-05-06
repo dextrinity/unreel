@@ -1,0 +1,8 @@
+.tv-season {
+    display: flex;
+    justify-content: space-between;
+}
+
+.season__number {
+
+}

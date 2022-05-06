@@ -1,0 +1,44 @@
+@use "../../../scss/" as *;
+
+.trending-main {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background-color: #282c34;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.trending-main:hover {
+    background-color: #fbda4f;
+    color: black;
+}
+
+@media (max-width: 550px) {
+    .trending-main {
+        width: 46%
+    }
+}
+
+.poster {
+    border-radius: 10px;
+}
+
+.titleContent {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    padding: 8px 0;
+
+}
+
+.underTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3px;
+    padding: 0 2px;
+    padding-bottom: 3px;
+}
