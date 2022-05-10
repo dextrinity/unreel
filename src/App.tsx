@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import HeaderContent from "./components/Header/HeaderContent"
 import MovieList from './components/ListofMovies/Movies/MovieList';
+import EpisodeList from './components/ListofMovies/TVSeasons/TVEpisodes/EpisodeList';
 import TVSeasonList from './components/ListofMovies/TVSeasons/TVSeasonList';
 import TVSeasons from './components/ListofMovies/TVSeasons/TVSeasons';
 import Home from './pages/HomePage/Home';

@@ -1,8 +1,10 @@
-import React from 'react'
-import { Seasons } from '../../../models/tvSeries';
-import PageHeader from '../../Header/PageHeader';
-import './TVSeasons.css'
+import React, { useEffect, useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
+import { getSeason, getTV } from "../../../apiConfig/dbAPI";
+import { TV, TVModel } from "../../../models/tv";
+import { Episode, Seasons, TVDetails } from "../../../models/tvSeries";
 
+import "./TVSeasons.css";
 
 interface SeasonProps {
   seasonDetails: Seasons;
@@ -11,24 +13,25 @@ interface SeasonProps {
 
 
 const TVSeasons = (props: SeasonProps) => {
+  // const [selectedEpisode, setSelectedEpisode] = useState<Episode>();
+  const { season_number } = props.seasonDetails;
 
-    const {id, name, episode_count, season_number } = props.seasonDetails
 
-    const handleOverview = (event: React.MouseEvent) => {
-        event.preventDefault();
-        props.handleOverviewClick(props.seasonDetails)
-      }
+  const handleOverview = (event: React.MouseEvent) => {
+    event.preventDefault();
+    props.handleOverviewClick(props.seasonDetails);
+  };
 
 
   return (
     <>
-      <div>
-    <p className="season__number" onClick={handleOverview} >{name}</p>
-    </div>
-
+      <ul className="seasons">
+        <li className="season__number" onClick={handleOverview} >
+          Season {season_number}
+        </li>
+       </ul>
     </>
-  )
-}
-
+  );
+};
 
 export default TVSeasons;

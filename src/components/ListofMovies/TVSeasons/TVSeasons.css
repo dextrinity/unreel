@@ -1,8 +1,18 @@
 .tv-season {
     display: flex;
-    justify-content: space-between;
 }
 
 .season__number {
+    padding: 0rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
 
+.season__number.active {
+    color: red
+}
+
+.season__number:hover {
+    color: red
 }

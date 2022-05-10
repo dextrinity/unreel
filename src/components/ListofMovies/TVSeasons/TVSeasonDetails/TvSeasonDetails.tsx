@@ -1,20 +1,15 @@
-// import ReactStars from 'react-stars'
+import ReactStars from 'react-stars'
 import React from "react";
-import { MovieModel } from "../../../models/movie";
-import "../Movie.scss"
-import apiConfig from "../../../apiConfig/apiConfig";
-import CastList from "./CastList";
+import { MovieModel } from "../../../../models/movie";
+import apiConfig from "../../../../apiConfig/apiConfig";
+import TVCastList from "./TVCastList";
 
-// import DefaulImage from './DefaultImage.jpeg';
-
-// const GUESTIMG_URL = "https://www.themoviedb.org/t/p/w276_and_h350_face/";
-// const defaulmage = "https://i1.wp.com/www.baytekent.com/wp-content/uploads/2016/12/facebook-default-no-profile-pic1.jpg?ssl=1"
 
 interface MovieProps {
   movieOverview: MovieModel;
 }
 
-const Movie = (props: MovieProps) => {
+const TvSeasonDetails = (props: MovieProps) => {
   const {
     name,
     title,
@@ -72,12 +67,14 @@ const Movie = (props: MovieProps) => {
             <div className="section__header">
               <h2>Cast</h2>
             </div>
-            <CastList />
+            <TVCastList />
           </div>
+        </div>
+        <div>
         </div>
       </div>
     </>
   );
 };
 
-export default Movie;
+export default TvSeasonDetails;
