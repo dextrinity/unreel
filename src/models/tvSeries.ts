@@ -37,8 +37,6 @@ export interface Episode {
     episode_number: number;
     season_number: number;
     
-
-
 } 
 
 export interface Seasons {
@@ -47,6 +45,7 @@ export interface Seasons {
     id: number;
     poster_path: string;
     season_number: number;
+    episodes: Episode[]
 }
 
 export interface Crew {

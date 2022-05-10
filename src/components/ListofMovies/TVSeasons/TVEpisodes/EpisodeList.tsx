@@ -1,0 +1,59 @@
+
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import { Episode } from "../../../../models/tvSeries";
+import "./EpisodeDetails.css";
+import notAvailable from '../../../../assets/not-available.jpeg'
+
+const IMG_URL = "https://image.tmdb.org/t/p/w227_and_h127_bestv2";
+
+
+interface EpisodeProps {
+  epDetails: Episode;
+  handleOverviewEpisode: (episode: Episode) => unknown;
+}
+
+const EpisodeDetails = (props: EpisodeProps) => {
+  const { name, still_path, id, air_date, vote_average, episode_number} = props.epDetails;
+  const rateVote = (vote_average / 10) * 5;
+
+
+  const handleOverviewEpisode = (event: React.MouseEvent) => {
+    event.preventDefault();
+    props.handleOverviewEpisode(props.epDetails)
+    
+  }; ;
+
+
+  return (
+ 
+<>
+       <div className="frame">
+         <div className="frame-container">
+      <img
+        id={"image" + id}
+        className="image1"
+        onClick = {handleOverviewEpisode}
+        src={IMG_URL + still_path} alt={name}
+        onError={({ currentTarget }) => {
+          currentTarget.src=`${notAvailable}`
+        }}
+      ></img>
+      <p id={"title" + id} className="title" onClick = {handleOverviewEpisode} >
+        {name}
+      </p>
+      <p className="minutes">Episode {episode_number}</p>
+      <p className="rate">{rateVote.toFixed(1)}
+          <FontAwesomeIcon className="checked" icon={faStar}></FontAwesomeIcon>
+      </p>
+      </div>
+</div>
+</>
+
+
+  );
+};
+
+
+export default EpisodeDetails;

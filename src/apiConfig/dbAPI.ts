@@ -56,7 +56,7 @@ export function getMovie(movieId:number) {
   export function getTVCredit(tvId:number) {
     return axios({
       method: 'get',
-      url: `${apiConfig.baseUrl}/tv/${tvId}`,
+      url: `${apiConfig.baseUrl}/tv/${tvId}/credits`,
       params: {
         "api_key": apiConfig.apiKey
     }

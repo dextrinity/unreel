@@ -45,8 +45,9 @@ const Home = () => {
   }, []);
   return (
     <div>
-  <div className="main-content">
       <HomePageContent />
+  <div className="main-content">
+      
 
 
       <div className="container">

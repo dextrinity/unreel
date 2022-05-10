@@ -1,0 +1,57 @@
+
+
+
+.frame {
+padding-top: 20px;
+position: relative;
+padding-left: 40px;
+padding-right: 40px;
+float: right;   
+width: 100%;
+height: 260px;
+}
+
+
+.title {
+    font-size: 120%;
+    margin-top: 10px;
+    text-align: left;
+    cursor: pointer;
+  
+}
+
+img.image1:hover {
+    transform: scale(1.10);
+  }
+
+.minutes {
+    font-size: 100%;
+    text-align: left;
+    float: left;
+    margin-top: 0px;
+}
+
+.rate {
+    font-size: 100%;
+    text-align: right;
+    float: right;
+    margin-top: 0px;
+}
+
+
+.checked {
+    color: #F4C243;
+    padding-left: 5px;
+}
+
+.image1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+.frame-container {
+    width: 100%;
+    height: 50%;
+}

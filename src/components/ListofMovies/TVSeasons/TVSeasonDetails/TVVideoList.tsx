@@ -1,24 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import { useParams } from 'react-router';
-import { getMovieTrailer } from '../../../apiConfig/dbAPI';
-import { VideoTrailer } from '../../../models/video';
+import { getTVSeriesTrailer } from '../../../../apiConfig/dbAPI';
+import { VideoTrailer } from '../../../../models/video';
 
 
-const VideoList = (props:any) => {
+const TVVideoList = (props:any) => {
 
-    let { movieId } = useParams<{movieId?: any}>();
+    let { tvId } = useParams<{tvId?: any}>();
 
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
-        getMovieTrailer(+movieId).then((response) => {
+        getTVSeriesTrailer(+tvId).then((response) => {
             const dataTrailer: VideoTrailer = response.data;
-            console.log(dataTrailer.results);
+            // console.log(dataTrailer.results);
             const trailerSlice:any = dataTrailer.results.slice(0, 5)
             setVideos(trailerSlice);
           });
-        }, [movieId]);
+        }, [tvId]);
 
     return (
         <>
@@ -57,4 +57,4 @@ const Video = (props:any) => {
     )
 }
 
-export default VideoList;
+export default TVVideoList;
