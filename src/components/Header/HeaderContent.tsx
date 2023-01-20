@@ -50,7 +50,7 @@ const Header = () => {
       <div className="header__wrap container">
         <div className="logo">
           {/* <img src={} alt="" /> logo here */}
-          <Link to="/">UNREEL</Link>
+          <Link to="/">TFLIX</Link>
         </div>
         <ul className="header__nav">
           {headerNav.map((e, i) => (
