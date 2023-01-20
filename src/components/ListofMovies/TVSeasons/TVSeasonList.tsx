@@ -13,7 +13,6 @@ import EpisodeList from "./TVEpisodes/EpisodeList";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import EpisodeOverview from "./TVEpisodes/EpisodeOverview";
 
 import './TVSeasonList.css'
 

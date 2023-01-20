@@ -61,6 +61,7 @@ const TvSeasonDetails = (props: MovieProps) => {
               half={true}
               color2="#F4C243"
             /> */}
+          
           <p className="overview">{overview}</p>
           
           <div className="cast">

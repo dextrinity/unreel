@@ -1,11 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import PageHeader from '../../components/Header/PageHeader'
-import HomeContent from '../../components/ListofMovies/HomeContent/HomeContent'
 import HomePageContent from './HomePageContent'
 import { Trending } from '../../models/home'
 import { Link } from 'react-router-dom'
-import MovieList from '../../components/ListofMovies/Movies/MovieList'
 import SingleContent from '../../components/ListofMovies/SingleContent/SingleContent'
 const base_API_trending = "https://api.themoviedb.org/3/trending/all/day?api_key=580e60a52ac48c49cfd3ca83ce561599"
 const base_API_movie = "https://api.themoviedb.org/3/trending/movie/day?api_key=580e60a52ac48c49cfd3ca83ce561599"
